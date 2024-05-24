@@ -1,0 +1,80 @@
+./sdriver.pl -t trace13.txt -s ./tshref -a "-p"
+#
+# trace13.txt - Restart every stopped process in process group
+#
+tsh> ./mysplit 4
+Job [1] (2508) stopped by signal 20
+tsh> jobs
+[1] (2508) Stopped ./mysplit 4
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+   10 pts/0    Ss+    0:02 -zsh
+   14 pts/0    S      0:00 -zsh
+   44 pts/0    S      0:00 -zsh
+   45 pts/0    S      0:00 -zsh
+   47 pts/0    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+   67 pts/1    Ss+    0:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" e18005f0f1b33c29e81d732535d8c0e47cafb0b5 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   68 pts/1    S+     0:00 sh /mnt/c/Users/jst/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.0/scripts/wslServer.sh e18005f0f1b33c29e81d732535d8c0e47cafb0b5 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   73 pts/1    S+     0:00 sh /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/code-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   77 pts/1    Sl+    0:26 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   97 pts/1    Sl+    0:03 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=ptyHost
+  142 pts/1    Sl+    0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=fileWatcher
+  153 pts/1    Sl+    1:13 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+  168 pts/4    Ss     0:00 /usr/bin/zsh
+  173 pts/4    S      0:00 /usr/bin/zsh
+  226 pts/4    S      0:00 /usr/bin/zsh
+  227 pts/4    S      0:00 /usr/bin/zsh
+  230 pts/4    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+  264 pts/1    Sl+    0:04 /home/footprinthere/.vscode-server/extensions/ms-vscode.cpptools-1.9.7/bin/cpptools
+  314 pts/1    Sl+    0:00 /home/footprinthere/.vscode-server/extensions/ms-vscode.cpptools-1.9.7/bin/cpptools-srv 264 {01C9CDD1-AFF0-4D2C-89F2-83755DBE1EC6}
+  341 pts/5    Ss     0:02 -zsh
+  345 pts/5    S      0:00 -zsh
+  372 pts/5    S      0:00 -zsh
+  374 pts/5    S      0:00 -zsh
+  375 pts/5    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+  475 pts/3    Ssl+   0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node -e  const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 46631 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+  484 pts/2    Ssl+   0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node -e  const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 46631 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+ 1579 pts/4    S+     0:04 ./tsh
+ 2503 pts/5    S+     0:00 make rtest13
+ 2504 pts/5    S+     0:00 /bin/sh -c ./sdriver.pl -t trace13.txt -s ./tshref -a "-p"
+ 2505 pts/5    R+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+ 2506 pts/5    S+     0:00 ./tshref -p
+ 2508 pts/5    T      0:00 ./mysplit 4
+ 2509 pts/5    T      0:00 ./mysplit 4
+ 2515 pts/5    R      0:00 /bin/ps a
+tsh> fg %1
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+   10 pts/0    Ss+    0:02 -zsh
+   14 pts/0    S      0:00 -zsh
+   44 pts/0    S      0:00 -zsh
+   45 pts/0    S      0:00 -zsh
+   47 pts/0    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+   67 pts/1    Ss+    0:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" e18005f0f1b33c29e81d732535d8c0e47cafb0b5 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   68 pts/1    S+     0:00 sh /mnt/c/Users/jst/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.0/scripts/wslServer.sh e18005f0f1b33c29e81d732535d8c0e47cafb0b5 stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   73 pts/1    S+     0:00 sh /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/code-server --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   77 pts/1    Sl+    0:26 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=869734653-615731317 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   97 pts/1    Sl+    0:03 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=ptyHost
+  142 pts/1    Sl+    0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=fileWatcher
+  153 pts/1    Sl+    1:13 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+  168 pts/4    Ss     0:00 /usr/bin/zsh
+  173 pts/4    S      0:00 /usr/bin/zsh
+  226 pts/4    S      0:00 /usr/bin/zsh
+  227 pts/4    S      0:00 /usr/bin/zsh
+  230 pts/4    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+  264 pts/1    Sl+    0:04 /home/footprinthere/.vscode-server/extensions/ms-vscode.cpptools-1.9.7/bin/cpptools
+  314 pts/1    Sl+    0:00 /home/footprinthere/.vscode-server/extensions/ms-vscode.cpptools-1.9.7/bin/cpptools-srv 264 {01C9CDD1-AFF0-4D2C-89F2-83755DBE1EC6}
+  341 pts/5    Ss     0:02 -zsh
+  345 pts/5    S      0:00 -zsh
+  372 pts/5    S      0:00 -zsh
+  374 pts/5    S      0:00 -zsh
+  375 pts/5    Sl     0:00 /home/footprinthere/.cache/gitstatus/gitstatusd-linux-x86_64 -G v1.5.1 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 16
+  475 pts/3    Ssl+   0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node -e  const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 46631 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+  484 pts/2    Ssl+   0:00 /home/footprinthere/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node -e  const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 46631 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+ 1579 pts/4    S+     0:04 ./tsh
+ 2503 pts/5    S+     0:00 make rtest13
+ 2504 pts/5    S+     0:00 /bin/sh -c ./sdriver.pl -t trace13.txt -s ./tshref -a "-p"
+ 2505 pts/5    R+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+ 2506 pts/5    S+     0:00 ./tshref -p
+ 2521 pts/5    R      0:00 /bin/ps a
+ 

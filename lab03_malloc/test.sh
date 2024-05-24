@@ -1,0 +1,1 @@
+gcc -Wall -O2 -m32 -o test test.c memlib.c
